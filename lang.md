@@ -141,7 +141,6 @@ The table below shows the full list of languages (and corresponding classes/alia
 | Roboconf                | graph, instances       |         |
 | Ruby                    | ruby, rb, gemspec, podspec, thor, irb | |
 | Rust                    | rust, rs               |         |
-| RVT Script              | rvt, rvt-script        | [highlightjs-rvt-script](https://github.com/Sopitive/highlightjs-rvt-script) |
 | SAS                     | SAS, sas               |         |
 | SCSS                    | scss                   |         |
 | SQL                     | sql                    |         |
