@@ -262,6 +262,7 @@ body {
   border-radius: 4px;
   box-shadow: var(--elevation-000);
   margin-right: auto;
+  cursor: pointer;
 }
 
 .editor_icon {
