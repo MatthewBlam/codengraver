@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="style/variables.css" rel="stylesheet" />
+    <link href="style/reset.css" rel="stylesheet" />
+    <link href="style/slider.css" rel="stylesheet" />
+    <link href="style/dropdown.css" rel="stylesheet" />
+    <link href="style/checkbox.css" rel="stylesheet" />
+    <link href="style/button.css" rel="stylesheet" />
+    <link href="style/drop.css" rel="stylesheet" />
+    <link href="style/checkmenu.css" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="../highlight/styles/github-dark-dimmed.min.css" rel="stylesheet" />
+    <title>codengraver</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="container">
+        <div id="main_text">
+          <h1 id="title">codengraver</h1>
+          <div>Create beautiful images of your source code and save it to various file formats.</div>
+          <div>Great tool for sharing your code, preparing your code for submission, or simply making your code look nice.</div>
+        </div>
+        <div id="tools">
+          <div id="options_bar">
+            <div id="options">
+              <div id="dropdowns">
+                <div id="language_dropdown" class="dropdown_container">
+                  <div class="dropdown" data-open="false">
+                    <input type="text" placeholder="Language" spellcheck="false" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <div class="dropdown_menu"></div>
+                </div>
+                <div id="style_dropdown" class="dropdown_container">
+                  <div class="dropdown" data-open="false">
+                    <input type="text" placeholder="Style" spellcheck="false" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <div class="dropdown_menu"></div>
+                </div>
+              </div>
+              <div id="font_size_container">
+                <span>Font Size</span>
+                <input id="font_size_slider" class="slider" min="1" max="50" type="range" value="12" step="1" />
+                <span id="font_size_value" class="slider_value"></span>
+              </div>
+              <div id="line_numbers_container" class="checkbox_container">
+                <div id="line_numbers_checkbox" class="checkbox" data-checked="false">
+                  <svg id="line_numbers_checkmark" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6667 1.5L4.25004 7.91667L1.33337 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span>Line Numbers</span>
+              </div>
+            </div>
+            <div id="upload_button" class="button button_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd" />
+                <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+              </svg>
+              <span>Upload</span>
+            </div>
+          </div>
+          <div id="code_input_container">
+            <svg id="delete_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
+            </svg>
+            <textarea id="code_input" spellcheck="false">
+// FizzBuzz
+for (var i = 1; i < 101; i++) {
+    if (i % 15 == 0) console.log("FizzBuzz");
+    else if (i % 3 == 0) console.log("Fizz");
+    else if (i % 5 == 0) console.log("Buzz");
+    else console.log(i);
+}</textarea
+            >
+            <div id="resize_area"></div>
+          </div>
+          <div id="prism_master_container">
+            <svg id="refresh_button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+
+            <pre id="prism_output_container"><code id="prism_output" class="language-javascript"></code></pre>
+          </div>
+          <div id="download_bar">
+            <div id="editor">
+              <svg id="highlight_icon" class="editor_icon" name="highlight" data-active="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.11 9" fill="currentColor">
+                <path d="M7,.19h1.5c.55,0,1,.45,1,1v3.14c0,.11-.09,.2-.2,.2h-3.09c-.11,0-.2-.09-.2-.2V1.19c0-.55,.45-1,1-1Z" transform="translate(3.94 -4.79) rotate(45)" />
+                <path d="M6.46,5.88l-2.51,2.51c-.07,.07-.17,.08-.23,.02l-.48-.17-.59,.59s-.09,.06-.14,.06l-2.33,.1c-.17,0-.24-.19-.11-.32l1.8-1.8-.17-.48c-.06-.05-.05-.16,.02-.23l2.51-2.51c.07-.06,.17-.07,.23-.02l2.03,2.03c.05,.06,.04,.16-.02,.23Z" />
+              </svg>
+              <svg id="coloring_icon" class="editor_icon" name="coloring" data-active="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z" clip-rule="evenodd" /></svg>
+              <svg id="bold_icon" class="editor_icon" name="bold" data-active="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M0 64C0 46.3 14.3 32 32 32H80 96 224c70.7 0 128 57.3 128 128c0 31.3-11.3 60.1-30 82.3c37.1 22.4 62 63.1 62 109.7c0 70.7-57.3 128-128 128H96 80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V256 96H32C14.3 96 0 81.7 0 64zM224 224c35.3 0 64-28.7 64-64s-28.7-64-64-64H112V224H224zM112 288V416H256c35.3 0 64-28.7 64-64s-28.7-64-64-64H224 112z" /></svg>
+              <svg id="italic_icon" class="editor_icon" name="italic" data-active="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M128 64c0-17.7 14.3-32 32-32H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H293.3L160 416h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H90.7L224 96H160c-17.7 0-32-14.3-32-32z" /></svg>
+              <svg id="underline_icon" class="editor_icon" name="underline" data-active="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path transform="translate(0, 20)" d="M16 64c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H128V224c0 53 43 96 96 96s96-43 96-96V96H304c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H384V224c0 88.4-71.6 160-160 160s-160-71.6-160-160V96H48C30.3 96 16 81.7 16 64zM0 448c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32z" /></svg>
+            </div>
+            <div id="download_options_button" class="button button_secondary">
+              <span>Options</span>
+            </div>
+            <div id="download_button" class="button button_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z" clip-rule="evenodd" />
+                <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />
+              </svg>
+
+              <span>Download</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="drop" class="drop_area" data-open="false">
+      <input id="file_input" class="drop_input" type="file" />
+      <div id="loader" class="drop_loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <svg id="drop_error" class="drop_error_icon" width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.5013 17.3058L15.0233 1.72102C13.6611 -0.57215 10.3407 -0.575197 8.9767 1.72102L0.499073 17.3058C-0.893396 19.6491 0.792463 22.6164 3.52167 22.6164H20.478C23.2049 22.6164 24.8938 19.6515 23.5013 17.3058ZM12 19.8039C11.2248 19.8039 10.5937 19.1728 10.5937 18.3976C10.5937 17.6224 11.2248 16.9914 12 16.9914C12.7752 16.9914 13.4062 17.6224 13.4062 18.3976C13.4062 19.1728 12.7752 19.8039 12 19.8039ZM13.4062 14.1789C13.4062 14.9541 12.7752 15.5851 12 15.5851C11.2248 15.5851 10.5937 14.9541 10.5937 14.1789V7.1476C10.5937 6.37238 11.2248 5.74135 12 5.74135C12.7752 5.74135 13.4062 6.37238 13.4062 7.1476V14.1789Z" fill="#F54336" />
+      </svg>
+      <svg id="drop_success" class="drop_check_icon" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.6581 1.92052L22.5468 0.809182C22.0889 0.351366 21.3415 0.351366 20.8797 0.809182L9.22631 12.4665L3.12177 6.362C2.66395 5.90413 1.91651 5.90413 1.45475 6.362L0.343362 7.47334C-0.114454 7.93121 -0.114454 8.6786 0.343362 9.14035L8.3889 17.1858C8.6198 17.4167 8.91715 17.5341 9.21849 17.5341C9.51983 17.5341 9.82112 17.4167 10.0481 17.1858L23.6463 3.58759C24.1159 3.12194 24.1159 2.37844 23.6581 1.92052Z" fill="currentColor" />
+      </svg>
+      <svg id="drop_icon" class="drop_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zM12.75 12a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V18a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V12z" clip-rule="evenodd" />
+        <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />
+      </svg>
+      <div><span id="drop_area_text">Drag and drop file or&nbsp;</span><span id="file_browse_button" class="browse_button">browse</span></div>
+    </div>
+    <div id="background_dim"></div>
+    <div id="download_progress_container">
+      <div id="download_title">Downloading</div>
+      <div id="download_info">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd" />
+          <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+        </svg>
+
+        <div id="download_progress">
+          <div id="progress_file_text">codengraver.pdf</div>
+
+          <div id="progress_bar">
+            <div id="progress_indicator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main_color_dummy" class="dummy hljs"></div>
+    <div id="secondary_color_dummy" class="dummy hljs-comment"></div>
+    <script src="../highlight/highlight.min.js"></script>
+    <script src="../highlight/highlightjs-line-numbers.min.js"></script>
+    <script src="DomToImage.js"></script>
+    <script src="html2img.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="jsPDF.js"></script>
+    <script src="logic/slider.js"></script>
+    <script src="logic/toggle-line-numbers.js"></script>
+    <script src="logic/drop.js"></script>
+    <script src="logic/editor.js"></script>
+    <script src="logic/dropdown.js"></script>
+    <script src="logic/resize.js"></script>
+    <script src="logic/download.js"></script>
+    <script src="logic/logic.js"></script>
+  </body>
+</html>

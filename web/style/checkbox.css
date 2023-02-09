@@ -1,0 +1,30 @@
+.checkbox_container {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--short);
+}
+
+.checkbox {
+  min-width: 14px;
+  min-height: 14px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+  display: inline-block;
+  pointer-events: none;
+  transition: var(--short);
+}
+
+.checkbox > svg {
+  color: var(--light-100);
+  width: 100%;
+  height: 100%;
+  padding: 2.5px;
+  pointer-events: none;
+  transition: var(--short);
+  opacity: 0;
+}
