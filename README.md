@@ -13,7 +13,6 @@
 
   <p align="center">
     Create beautiful images of your code with syntax highlighting and customizability.
-
     <br />
     <br />
     <a href="https://github.com/MatthewBlam/codengraver">Get Started</a>
