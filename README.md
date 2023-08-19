@@ -17,7 +17,7 @@
     <br />
     <a href="https://github.com/MatthewBlam/codengraver">Get Started</a>
     ·
-    <a href="https://www.youtube.com/watch?v=cqKX93PYYq4">View Demo</a>
+    <a href="https://github.com/MatthewBlam/codengraver">View Demo</a>
     ·
     <a href="https://github.com/MatthewBlam/codengraver/issues">Report Bug</a>
     ·
@@ -58,7 +58,7 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-For a walk-through of how to use the codengraver and it's features, please watch <a href="https://www.youtube.com/watch?v=cqKX93PYYq4">this video</a>.
+For a walk-through of how to use the codengraver and it's features, please watch <a href="https://github.com/MatthewBlam/codengraver">this video</a>.
 
 
 
