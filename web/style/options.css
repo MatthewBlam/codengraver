@@ -1,0 +1,141 @@
+#options_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    width: 370px;
+    height: fit-content;
+    border-radius: 16px;
+    padding: 20px 30px 20px 30px;
+    background-color: var(--light-100);
+    box-shadow: var(--elevation-200);
+    font-family: "Roboto", sans-serif;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#options_settings_container > div:last-child {
+    margin-bottom: 40px;
+}
+
+#options_close {
+    width: fit-content;
+    font-size: var(--fs-10);
+    padding: 8px 10px 8px 9.5px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+#file_types {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+#file_types > div {
+    width: 100%;
+}
+
+#pdf {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.file_type {
+    font-weight: 400;
+    font-size: var(--fs-16);
+    padding: 12px 14px 10px 14px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--light-100);
+    color: var(--text);
+    user-select: none;
+    cursor: pointer;
+    transition: var(--short);
+}
+
+#line_container {
+    width: 100%;
+    position: relative;
+}
+
+#slider {
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: var(--primary);
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    transition: var(--medium);
+}
+
+#divider {
+    height: 2px;
+    width: 100%;
+    background-color: var(--light-300);
+    border-radius: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.opt {
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.opt > span {
+    display: block;
+    color: var(--text);
+    font-size: var(--fs-12);
+    font-weight: 400;
+    margin-bottom: 6px;
+    user-select: none;
+}
+
+.opt_multi {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.opt_checkbox > span {
+    pointer-events: none;
+}
+
+#quality_opt > span,
+#margin_opt > span {
+    margin-bottom: 11px;
+}
+
+#quality_slider_container,
+#margin_slider_container {
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+#quality_slider_container > span,
+#margin_slider_container > span {
+    font-size: var(--fs-14);
+    columns: var(--text);
+}
+
+#quality_value,
+#margin_value {
+    margin-right: 0;
+    margin-left: 2px;
+    color: var(--text);
+}

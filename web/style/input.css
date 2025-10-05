@@ -1,0 +1,35 @@
+.input {
+    font-size: var(--fs-14);
+    display: flex;
+    align-items: center;
+    background-color: var(--light-200);
+    border: 0px solid var(--primary);
+    border-radius: 4px;
+    padding: 8px 10px 8px 12px;
+}
+
+.input > input {
+    margin: 0;
+    padding: 0;
+    margin-right: 7px;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-weight: 400;
+    color: var(--text);
+    background-color: var(--light-200);
+}
+
+.input > input::placeholder {
+    color: var(--icon);
+}
+
+.input > input::selection {
+    color: var(--primary);
+    background: var(--secondary);
+}
+
+.input > input::moz-selection {
+    color: var(--primary);
+    background: var(--secondary);
+}
