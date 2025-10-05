@@ -1019,8 +1019,8 @@ function style_menu_option_handler(e) {
 }
 
 function change_style(old_style, new_style) {
-    var old_file = `/highlight/styles/${style_dict[old_style]}`;
-    var new_file = `/highlight/styles/${new_style}`;
+    var old_file = `highlight/styles/${style_dict[old_style]}`;
+    var new_file = `highlight/styles/${new_style}`;
     if (old_file == new_file) {
         return;
     }
