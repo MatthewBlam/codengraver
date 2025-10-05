@@ -15,13 +15,7 @@
     Create beautiful images of your code with syntax highlighting and customizability.
     <br />
     <br />
-    <a href="https://github.com/MatthewBlam/codengraver">Get Started</a>
-    ·
-    <a href="https://github.com/MatthewBlam/codengraver">View Demo</a>
-    ·
-    <a href="https://github.com/MatthewBlam/codengraver/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/MatthewBlam/codengraver/issues">Request Feature</a>
+    <a href="https://codengraver.vercel.app/">Go to app</a>
   </p>
 </div>
 
